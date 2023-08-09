@@ -1,6 +1,7 @@
-function [valid_locus]=Above_Threshold(outputSheet)
+function [valid_locus]=Below_Threshold(outputSheet)
 %Poorv Lal
 %8/9/2023
+%Finds all of the files that fall below a log likelihood threshold of -5900 and outputs a text file listing out those loci
 
 tab=readtable(outputSheet,'VariableNamingRule','preserve');
 tab=tab(1:end,[1 3]);
