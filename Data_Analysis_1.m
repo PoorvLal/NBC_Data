@@ -1,5 +1,5 @@
 function [out]=Data_Analysis_1(dataSheet)
-%Purpose: creates a seperate histogram for each organisum from Naive_Test Data
+%Purpose: creates a table detailing different attributes of each organism as well as a 2 histogram based indexes provided by the user
 %Name   :Poorv Lal
 %Date   : 7/18/23
 
