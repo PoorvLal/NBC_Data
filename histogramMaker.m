@@ -16,6 +16,6 @@ xlabel('Log-Likelihood');
 ylabel('Number of Sequences');
 xlim([-6100 -4000]);
 legend;
-saveas(gcf,'Set_Full_Tree.png');
+%saveas(gcf,'Set_Full_Tree.png');
 
 saveas(gcf,'Full_Tree_EvenDis.png')
