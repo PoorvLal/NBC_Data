@@ -82,17 +82,23 @@ eh2=input("Enter the index of the end of the second histogram:");
 clf
 
 %histogram of known
-V2=V(sh1:eh1);
-histogram(V2,'BinWidth',50,'FaceColor','g');
+Known=V(sh1:eh1);
+histogram(Known,'BinWidth',50,'FaceColor','g');
 hold on
 
 
 %hisogram of unknown
-V3=V(sh2:eh2);
-histogram(V3,'BinWidth',50,'FaceColor','r');
+Unknown=V(sh2:eh2);
+histogram(Unknown,'BinWidth',50,'FaceColor','r');
 
 %his%hisogram of unknown without zeros
 %V4=nonzeros(V3);
 %histogram(V4)
 
+title('Increased Data Set');
+xlabel('Log-Likelihood');
+ylabel('Number of Sequences');
+xlim([-6100 -4000]);
+legend;
+saveas(gcf,'Set3_2.png');
 hold off
