@@ -6,10 +6,9 @@ function []=Above_Threshold(outputSheet,index)
 
 %input example:
 %Above_Threshold('Set3_2.csv',215294)
-
-%identify index where the organisum its looking at changes
-%this gives you the first index when organisum changes
+%where the index is the location at which the output file changes from Known to unknown
 %index for Set3_2 is 215294
+
 tab=readtable(outputSheet,'VariableNamingRule','preserve');
 tab=tab(index:end,[1 3]);
 
