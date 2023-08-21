@@ -4,9 +4,18 @@ function []=histogramMaker(Sheet1,Sheet2)
 
 hold on
 M= csvread(Sheet1,1,2);
-V=M(:,1);
-histogram(V,'BinWidth',25,'FaceColor','b')
+Known=M(:,1);
+histogram(Known,'BinWidth',25,'FaceColor','g')
 
 M= csvread(Sheet2,1,2);
-V=M(:,1);
-histogram(V,'BinWidth',25,'FaceColor','y')
+Unknown=M(:,1);
+histogram(Unknown,'BinWidth',25,'FaceColor','r')
+
+title('Full Tree Data Set');
+xlabel('Log-Likelihood');
+ylabel('Number of Sequences');
+xlim([-6100 -4000]);
+legend;
+saveas(gcf,'Set_Full_Tree.png');
+
+saveas(gcf,'Full_Tree_EvenDis.png')
